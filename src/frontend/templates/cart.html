@@ -27,9 +27,9 @@
 
         {{ if eq (len $.items) 0 }}
         <section class="empty-cart-section">
-            <h3>Your shopping cart is empty!</h3>
-            <p>Items you add to your shopping cart will appear here.</p>
-            <a class="cymbal-button-primary" href="{{ $.baseUrl }}/" role="button">Continue Shopping</a>
+            <h3>El carrito se encuentra vacio!</h3>
+            <p>Los Items agregados en tu carrito apareceran aqui.</p>
+            <a class="cymbal-button-primary" href="{{ $.baseUrl }}/" role="button">Continuar comprando</a>
         </section>
         {{ else }}
         <section class="container">
@@ -44,10 +44,10 @@
                         <div class="col-8 pr-md-0 text-right">
                             <form method="POST" action="{{ $.baseUrl }}/cart/empty">
                                 <button class="cymbal-button-secondary cart-summary-empty-cart-button" type="submit">
-                                    Empty Cart
+                                    Carrito Vacio
                                 </button>
                                 <a class="cymbal-button-primary" href="{{ $.baseUrl }}/" role="button">
-                                    Continue Shopping
+                                    Continuar comprando
                                 </a>
                             </form>
                         </div>
@@ -86,7 +86,7 @@
                     {{ end }}
 
                     <div class="row cart-summary-shipping-row">
-                        <div class="col pl-md-0">Shipping</div>
+                        <div class="col pl-md-0">Envio</div>
                         <div class="col pr-md-0 text-right">{{ renderMoney .shipping_cost }}</div>
                     </div>
 
@@ -103,13 +103,13 @@
 
                         <div class="row">
                             <div class="col">
-                                <h3>Shipping Address</h3>
+                                <h3>Direccion de Envio</h3>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="col cymbal-form-field">
-                                <label for="email">E-mail Address</label>
+                                <label for="email">Correo electronico</label>
                                 <input type="email" id="email"
                                     name="email" value="someone@example.com" required>
                             </div>
@@ -117,7 +117,7 @@
 
                         <div class="form-row">
                             <div class="col cymbal-form-field">
-                                <label for="street_address">Street Address</label>
+                                <label for="street_address">Calle</label>
                                 <input type="text" name="street_address"
                                     id="street_address" value="1600 Amphitheatre Parkway" required>
                             </div>
@@ -133,7 +133,7 @@
 
                         <div class="form-row">
                             <div class="col cymbal-form-field">
-                                <label for="city">City</label>
+                                <label for="city">Ciudad</label>
                                 <input type="text" name="city" id="city"
                                     value="Mountain View" required>
                                 </div>
@@ -141,12 +141,12 @@
 
                         <div class="form-row">
                             <div class="col-md-5 cymbal-form-field">
-                                <label for="state">State</label>
+                                <label for="state">Provincia</label>
                                 <input type="text" name="state" id="state"
                                     value="CA" required>
                             </div>
                             <div class="col-md-7 cymbal-form-field">
-                                <label for="country">Country</label>
+                                <label for="country">Pais</label>
                                 <input type="text" id="country"
                                     placeholder="Country Name"
                                     name="country" value="United States" required>
@@ -155,13 +155,13 @@
 
                         <div class="row">
                             <div class="col">
-                                <h3 class="payment-method-heading">Payment Method</h3>
+                                <h3 class="payment-method-heading">Metodo de Pago</h3>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="col cymbal-form-field">
-                                <label for="credit_card_number">Credit Card Number</label>
+                                <label for="credit_card_number">Numero tarjeta de credito</label>
                                 <input type="text" id="credit_card_number"
                                     name="credit_card_number"
                                     placeholder="0000000000000000"
@@ -172,7 +172,7 @@
 
                         <div class="form-row">
                             <div class="col-md-5 cymbal-form-field">
-                                <label for="credit_card_expiration_month">Month</label>
+                                <label for="credit_card_expiration_month">Mes</label>
                                 <select name="credit_card_expiration_month" id="credit_card_expiration_month">
                                     <option value="1">January</option>
                                     <option value="2">February</option>
@@ -190,7 +190,7 @@
                                 <img src="{{ $.baseUrl }}/static/icons/Hipster_DownArrow.svg" alt="" class="cymbal-dropdown-chevron">
                             </div>
                             <div class="col-md-4 cymbal-form-field">
-                                    <label for="credit_card_expiration_year">Year</label>
+                                    <label for="credit_card_expiration_year">Año</label>
                                     <select name="credit_card_expiration_year" id="credit_card_expiration_year">
                                     {{ range $i, $y := $.expiration_years}}<option value="{{$y}}"
                                         {{if eq $i 1 -}}
@@ -210,7 +210,7 @@
                         <div class="form-row justify-content-center">
                             <div class="col text-center">
                                 <button class="cymbal-button-primary" type="submit">
-                                    Place Order
+                                    Enviar Orden
                                 </button>
                             </div>
                         </div>
